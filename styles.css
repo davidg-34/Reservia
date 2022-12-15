@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "raleway", "sans-serif";    
+}
+
+body{
+    font-family: "Raleway", "Sans serif";
+    }
+
+/*******************LOGO*************************/
+
+.logo{
+    width: 100px;
+    margin-right: auto;
+    }
+
+/******************HEADER**************************************/
+
+header{
+    display: flex;
+    /* justify-content: flex-end; */
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+nav{
+    display: flex;
+}
+nav a:link{
+    text-decoration: none;
+    color: #0065fc;
+    font-weight: bold;
+    padding: 3rem 2rem;
+    border-top: 2px solid transparent;
+}
+nav a:visited{
+    color: #aaa;
+}
+nav a:hover{
+    color: #85a3fd;
+    border-top: 2px solid #0061fc;
+}
+nav a:active{
+    color: #0030fc;
+}
+.sign-up{
+    text-decoration: none;
+    color: #0065fc;
+    font-weight: bold;
+    margin-left: 2rem;
+}
+.sign-up:hover{
+    box-shadow: #85a3fd 0 0 50px;
+    background-color: rgba(133, 163, 253, 0.2);
+}
+
+/* MEDIA QUERIES HEADER */
+@media screen and (max-width: 750px) { 
+    nav{
+        order: 1;
+    }
+    nav a{
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid #eff1ef;
+    }
+    nav a:hover{
+        border-bottom: 2px solid #0061fc;
+        border-top: 2px solid transparent;
+    }
+    nav{        
+        width: 100%;
+        text-align: center;
+    } 
+    nav a{
+        width: 100%;
+        border-bottom: #eff1ef 2px solid;
+    }   
+  }
+
+/******************** INFORMATION ***************/
+
+#information{
+    margin: 2rem 4rem 0 4rem;
+}
+
+/************** FORMULAIRE **********************/
+.form{    
+    margin-top: 2vh;
+}
+form{
+    display: flex;
+}
+.location-map{
+    background-color: #eff1ef;
+    padding: 1rem 1.25rem;
+    border-radius: 1rem 0 0 1rem;
+}
+input[type=search]{
+    padding-left: 1rem;
+    font-weight: 600;
+    font-size: large;
+    text-transform: capitalize;
+    border-bottom: #eff1ef solid 1px;
+    border-top: #eff1ef solid 1px;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    outline-color: #0065fc;
+}
+input[type=submit]{
+    border: none;/* /transparent */
+    background-color: #0065fc;
+    border-radius: 0 1rem 1rem 0;
+    color: #fff;
+    font-size: large;
+    font-weight: 600;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+.search-btn{
+    display: none;
+}
+
+/* ***MEDIA QUERIES FORMULAIRE*** */
+@media screen and (max-width: 750px){
+    input[type=submit]{
+        display: none;
+    }
+    .search-btn{
+    /* display: flow-root; */
+    display: inline-block;
+    border: none;
+    background-color: #0065fc;
+    border-radius: 0 1rem 1rem 0;
+    color: #fff;
+    font-size: large;
+    font-weight: 600;
+    padding: 0 1rem;
+    cursor: pointer;
+    }    
+}
+
+/***************** FILTERS **********************/
+
+.filter{
+    margin-top: 2rem;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+.filter .button{
+    display: flex;
+    margin-left: 2rem;
+    border-radius: 50px;
+    align-items: baseline;    
+    border: 2px solid #d3d3d3;
+    margin-bottom: 1rem;
+    cursor: pointer;    
+}
+.filter .button h4{
+    /* padding: 0 1.5rem; */
+    padding: 0 1.5rem 0 1.5rem;
+}
+.filter .fas{
+    margin: -2px;
+}
+.button .fas{    
+    padding: 1.2rem;
+    margin-right: -1rem;
+    border-radius: 50px;
+    color: #0065fc;
+    background-color: #deebff;    
+}
+.filter .button:hover{
+    background-color: #0065fc;
+}
+
+/***MEDIA QUERIES FILTERS ****/
+@media screen and (max-width: 750px){
+    .filter{
+        flex-direction: column;
+    }
+    .filter h1{
+        margin-bottom: 1rem;
+    }
+    .filter>.button{
+        margin-left: 0;
+    }
+}
+
+/********* INFORMATION *********************/
+
+.info{
+    margin-top: 1rem;
+    display: flex;
+    align-items: baseline;
+}
+.info .fas{
+    margin-right: 1rem;
+    padding: 0.5em 0.9em;
+    border: solid 1px #d3d3d3;
+    color: #0065fc;    
+    border-radius: 50px;    
+}
+
+/**************************************************************************************************************************/
+/**** MAIN : HEBERGEMENT A MARSEILLE - LES PLUS POPULAIRES ****/
+
+main{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 2.1fr 1fr;    
+    gap: 2em;         
+}
+main a{
+    color: #000;
+    text-decoration: none;
+}
+.site, .popular{
+    background-color: #eff1ef;
+    border-radius: 1rem;
+    padding: 0 2rem 2rem;
+    /* flex-wrap: wrap; */
+}
+.site>header, .popular>header{
+    padding: 2rem 0 1.5rem 0;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;/* utile seulement pour 'popular' avec favicon 'chart-line'... */
+}
+
+/*** HOVER : HEBERGEMENTS - LES PLUS POPULAIRES - ACTIVITES A MARSEILLE***/
+.popular a:hover, .site .cards .card:hover, .activity-list a:hover{
+    opacity: 0.9;
+    outline-offset: -1px;
+    outline: #0065fc solid 2px; 
+}
+/*** STARS - RATING ***/
+.cards .rating {
+    color: #d3d3d3;    
+}
+.cards .stars{
+    color: #0065fc;
+    font-size: smaller;
+}
+
+/* ********* MEDIA QUERIES MAIN *********** */
+@media screen and (max-width: 1400px) {
+    main{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 2rem;
+    }
+    .site{
+        order: 1;
+    }
+}
+/************* HEBERGEMENTS A MARSEILLE : SITE *****************************************/
+
+.site .cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: row;
+    /* grid-template-rows: repeat(4, auto); */
+    gap: 2em;
+    border-radius: 2em;
+}
+.site .cards .card{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 0.3rem;
+ } 
+.site .cards img{
+    border-radius: 20px 20px 0 0;    
+    width: 100%;
+    height: 7rem;
+    object-fit: cover;   
+}
+.site .cards .card .content h3, p, .stars{
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+}
+/* Afficher plus */
+.site .plus{ 
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/****** MEDIA QUERIES HEBERGEMENTS : SITE ******/
+@media screen and (min-width: 320px) {     
+    .site .cards{        
+        grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .site .cards{        
+        grid-template-columns: repeat(3, 1fr);                
+    }
+}
+
+/*********************** LES PLUS POPULAIRES : POPULAR *****************************************/
+
+.popular .fa-chart-line{
+    font-size: x-large;
+}
+.popular .cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    gap: 2rem;
+}
+.popular .card{
+    display: grid;
+    grid-template-columns: 1.2fr 2fr;
+    background-color: #fff;
+    padding: 0.3em;
+    border-radius: 20px;
+    box-shadow: 10px 5px 10px 1px rgba(185, 185, 206, 0.02);
+}
+.popular .card img{
+    width: 100%;
+    height: 8.7rem;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+    object-position: center;
+}
+.popular .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1em;
+    padding: 0.5rem;
+}
+.popular .card .content span{
+    display:inline-block;
+    margin-top: 0.5rem;
+}
+.popular .card .stars{
+    margin-left: 0;
+}
+
+/*****MEDIA QUERIES POPULAR *******/
+@media screen and (max-width: 1400px) {
+      .popular .cards{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .popular .card img{
+        min-height: 100%;
+        /* min-height: -webkit-fill-available; */
+    }
+}
+@media screen and (max-width: 1055px) {
+   /*  .site{
+        order: 1;
+    } */
+    .popular .cards{
+        display: block;
+    }
+    .popular .cards a{
+        margin-bottom: 2rem;
+    }
+    .popular .cards a:last-child{
+        margin-bottom: 1rem;
+    }
+}
+
+/*********** ACTIVITES A MARSEILLE *************************************************************************************/
+
+#activities h2{
+    padding: 3.5rem 0 1.5rem;
+    margin: 0;
+}
+.activity{
+    display: grid;
+    gap: 2rem;
+}
+.activity a{
+    text-decoration: none;
+    color: #000;
+}
+.activity .cards{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 1rem;   
+}
+.activity .cards:hover{
+    border-radius: 1rem;
+    border: #0065fc solid 1px;    
+}
+.cards img{
+    width: 100%;
+    height: 20vh;
+    border-radius: 1rem 1rem 0 0;
+    object-fit: cover;
+    object-position: center;
+}
+.activity .cards h3{
+    background-color: #fff;    
+    border-radius: 0 0 1rem 1rem;
+    padding: 1rem;
+    margin-top: -4px;
+    /* white-space: nowrap;
+    text-overflow: ellipsis; */
+}
+.activity .cards:hover{
+    opacity: 0.8;
+}
+.activity .cards h3:hover{
+    color: #0065fc;
+}
+
+/**** MEDIA QUERIES ACTIVITY *****/
+@media (min-width: 300px){ 
+    .activity{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    } 
+}
+
+@media (min-width: 1080px){
+    .activity img{        
+        height: 100%;
+        object-position: 50% 40%;          
+    }
+    .activity{
+        display: grid;
+        column-gap: 3rem;
+        row-gap: 2.5rem;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(11, 8px);
+    }
+    .activity .card1{
+        grid-row: 1 / 11;
+    }
+    .activity .card2{
+        grid-row: 1 / 6;
+    }
+    .activity .card3{
+        grid-column: 2 / 3;
+        grid-row: 7 / 11;
+    }
+    .activity .card4{
+        grid-column: 3 / 4;
+        grid-row: 1 / 11;
+    }
+    .activity .card5{
+        grid-column: 4 / 5;
+        grid-row: 1 / 5;
+    }
+    .activity .card6{
+        grid-column: 4 / 5;
+        grid-row: 6 / 11;   
+    }
+    .activity .cards:hover{
+        border-radius: 1rem 1rem 0 0;
+        border-top: #0065fc solid 1px;
+        border-bottom: none;
+        border-left: #0065fc solid 1px;
+        border-right: #0065fc solid 1px;               
+    }
+    .activity .cards h3:hover{
+        border-bottom: #0065fc solid 1px;
+        border-right: #0065fc solid 1px;
+        border-left: 1px solid #0065fc;        
+    }
+    .activity .cards h3{
+        box-shadow: #e2dede 0px 5px 10px 0px;
+    }
+}
+
+/* ************** FOOTER ************************************* */
+
+footer{
+    margin-top: 3.5rem;    
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #eff1ef;
+    padding: 2.5rem 0 3rem 4rem;
+}
+.footer ul{
+    list-style-type: none;
+    line-height: 2rem;
+    padding-right: 1rem;
+}
+footer ul h3{
+    margin-bottom: 0.5rem;
+}
+.footer a{
+    text-decoration: none;
+    color: #000;
+}
+.footer a:hover{
+    color: #0065fc;
+}
+
+@media screen and (max-width: 700px) { 
+    .footer{
+        grid-template-columns: 1fr;
+        padding-left: 2rem;
+    }
+    .footer ul{
+        margin-bottom: 1rem;
+    }
+}
+
+/*************** RESPONSIVE MARGIN *************/
+@media screen and (min-width: 1425px) {
+    #header, #information, main, #activities{
+        margin: 0 4rem;
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 1425px) {
+    #header, #information, main, #activities{
+        margin: 0 2rem;
+    }
+}
+@media screen and (max-width: 750px){
+    #header{
+        margin-top: 2rem;
+    }
+}
+
+
+
+
